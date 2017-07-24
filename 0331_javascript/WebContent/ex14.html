@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function</title>
+		<script type="text/javascript">
+			// 익명함수
+			var msg = function(){
+				document.write("Hello <br/>");
+			}
+			msg();
+			
+		</script>
+		<script type="text/javascript">
+			// 선언함수 : 먼저 만들어지고 나중에 실행된다.
+			
+			function test(){
+				document.write("Hi~~");
+			}
+			function test(){
+				document.write("안녕~~");
+			}
+			test();
+			document.write("<hr/>");
+		</script>
+		<script type="text/javascript">
+			// 선언함수 : 먼저 만들어지고 나중에 실행된다.
+			test();
+			function test(){
+				document.write("Hi2~~");
+			}
+			function test(){
+				document.write("안녕2~~");
+			}
+			document.write("<hr/>");
+		</script>
+		<script type="text/javascript">
+			// 익명함수 : 나중에 순서대로
+			var test2 = function(){
+				document.write("Hi3~~");
+			}
+			// 선언함수 : 먼저만들어짐
+			function test2(){
+				document.write("안녕3~~");
+			}
+			test2();
+			document.write("<hr/>");
+		</script>
+		<script type="text/javascript">
+			test3();
+			// 익명함수 : 나중에 순서대로
+			var test3 = function(){
+				document.write("Hi4~~");
+			}
+			// 선언함수 : 먼저만들어짐
+			function test3(){
+				document.write("안녕4~~");
+			}
+			document.write("<hr/>");
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

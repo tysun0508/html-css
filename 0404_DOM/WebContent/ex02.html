@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>동일요소검색 : getElementsByTagName </title>
+<script type="text/javascript">
+	onload = function () {
+		document.getElementById("btn").onclick = function () {
+			var count = document.getElementsByTagName("li");
+			//alert(count.length); // 5개
+			var s = "";
+			for (var i = 0; i < count.length; i++) {
+				//s = s + count[i].getAttribute("value"); // 속성 추출
+				s = s + count[i].firstChild.data; // 텍스트 추출, 돔 방식으로 글자 추출할 때 사용
+			}
+			document.getElementById("res").innerHTML= s;
+		};
+	};
+</script>
+</head>
+<body>
+	<ul>
+		<li value="1">java1</li>	
+		<li value="2">java2</li>	
+		<li value="3">java3</li>	
+		<li value="4">java4</li>	
+		<li value="5">java5</li>	
+	</ul>
+	<ul>
+		<li value="java1">java1</li>	
+		<li value="java2">java2</li>	
+		<li value="java3">java3</li>	
+		<li value="java4">java4</li>	
+		<li value="java5">java5</li>	
+	</ul>
+	<button id="btn">버튼</button>
+	<hr/>
+	<h2>결과보기 : <span id = "res"></span></h2>
+</body>
+</html>
+
+
+
+

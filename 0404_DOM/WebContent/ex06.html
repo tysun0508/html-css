@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>요소 생성 및 속성 추가</title>
+<script type="text/javascript">
+	onload = function() {
+		// 태그 생성
+		var p = document.createElement("p");
+		var hr = document.createElement("hr");
+		
+		// 태그에 속성 추가
+		hr.setAttribute("title","DOM으로 만든 수평선");
+		hr.setAttribute("width","80%");
+		
+		// body에 자식 노드로 추가 : appendChild
+		document.body.appendChild(hr);
+	};
+</script>
+</head>
+<body>
+<br /><br /><br /><br /><br /><br /><br /><br />
+	<hr title="직접 태그를 통해서 생성된 수평선" width="50%"/>
+	<br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+</html>

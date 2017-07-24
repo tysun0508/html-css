@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 생성</title>
+<script type="text/javascript">
+	function prn(msg) {
+		document.write(msg+"<br />");
+	}
+	var person = new Object(); // 개체 생성, 
+	  person["name"] ="홍길동";  //  자바의 멤버필드
+	  person["age"] =14;  //  자바의 멤버필드
+	  person["salary"] = 2400;  //  자바의 멤버필드
+	  person["salary2"] = function() {
+		var month = this["salary"]/12;
+		prn("이름:"+this["name"]+", 월급 : "+ month);
+	  };
+	
+	 person.salary2(); 
+	 document.write("<hr />");
+	 // 만들어진 객체 참조
+	 var person2 = person.name ;
+	 document.write(person2);
+	 document.write("<hr />");
+	 // 만들어진 객체 참조
+	 var person3 = person.salary2;
+	 var name = "둘리";
+	 var salary = 3600;
+	 person3();
+	 document.write("<hr />");
+	 
+	 // 빈객체 만들어서 값넣기
+	 var person4 = {};
+	 person4.name="희동이",
+	 person4.age = 25;
+	 document.write(person4.name+"<hr />");
+	 
+	 // 객체 리터럴 사용 (맵방식, json방식);
+	 var person5 = {
+		 name : "마루치",
+		 age : 14,
+		 salary : 4800,
+		 salary2 : function() {
+			var month = this['salary'] /12 ;
+			prn("이름 : " + this["name"] + ", 월급 : " + month);
+		}
+	 }
+	 person5.salary2();
+</script>
+</head>
+<body>
+	
+</body>
+</html>

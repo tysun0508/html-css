@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아이디 참조 : getElementById()</title>
+<style type="text/css">
+	div{
+		background-color: orange;
+		height: 100px;
+	}
+</style>
+<!-- 인식 됨 -->
+<script type="text/javascript">
+	function change_go() {
+		document.getElementById("mydiv").style.background="yellow";
+	}
+</script>
+<!-- 인식 안됨 -->
+<script type="text/javascript">
+      var btn = document.getElementById("btn1");
+          btn.onclick = function() {
+			  document.getElementById("mydiv").style.color="red";
+		  };
+ </script>
+ <script type="text/javascript">
+ 	// 페이지 로드 이벤트 => body를 읽고 난후 실행하자
+    window.onload = function() {
+    	var btn = document.getElementById("btn1");
+        btn.onclick = function() {
+			  document.getElementById("mydiv").style.color="red";
+			  document.getElementById("mydiv").style.width="100px";
+		  };
+	}
+ </script>
+ </head>
+<body>
+<!-- DOM(Document Object Model) : 문서 객체 모델
+     - 웹브라우저가 html 페이지를 인식하는 방식
+     - 노드 : hteml의 각 요소 = Element = 태그 
+     - DOM은 트리구조이다.  형제노드, 부모노드, 자식노드
+ -->
+ <div id="mydiv"><span>안녕</span>하세요</div>
+ <input type="button" id="btn1" value="스타일변경1" onclick=""/>
+ <button id="btn2" onclick="change_go()">스타일변경2</button>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

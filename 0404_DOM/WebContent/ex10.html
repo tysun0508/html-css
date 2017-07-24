@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>노드 변경 ; repalceChild</title>
+<style type="text/css">div{border: 1px solid red;}</style>
+<script type="text/javascript">
+	onload = function() {
+		  var p = document.createElement("p");
+		  var s = document.createTextNode("안녕~~");
+		  p.appendChild(s);
+		  
+		  var p2 = document.createElement("p");
+		  var s2 = document.createTextNode("Hello~~");
+		  p2.appendChild(s2);
+		  
+		  document.getElementById("div").appendChild(p);
+		  document.getElementById("div").replaceChild(p2,p);
+	};
+</script>	
+</head>
+<body>
+	<div id="div"></div>
+</body>
+</html>

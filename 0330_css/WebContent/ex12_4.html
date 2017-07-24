@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position</title>
+	<!-- absolute ; 자기를 포함하고 있는 태그을 기준으로 -->
+	<style type="text/css">
+		div.relative{
+			position: relative;
+			width: 400px;
+			height: 200px;
+			border: 1px solid green;
+			left: 50px; top: 50px;
+		}
+		div.absolute {
+			position: absolute;
+			right: 0;
+			top:0;		
+		}
+
+	</style>
+</head>
+<body>
+	<h2>position: absolute;</h2>
+
+	<p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+	<div class="relative">This div element has position: relative;
+  		<div class="absolute">This div element has position: absolute;</div>
+	</div>
+</body>
+</html>

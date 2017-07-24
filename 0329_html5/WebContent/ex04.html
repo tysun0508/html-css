@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>문서를 연결하는 네비게이션 링크 : navi</title>
+<style type="text/css">
+	header{
+		height: 280px;
+		margin-top: 0;
+		background-image: url(img/bg.png);
+		background-position: left top; /* 왼쪽상단 */ 
+		background-repeat: no-repeat; /* 안채울꺼야 */
+	}
+	.navi{
+		background-color: #003E00;
+		margin-top: -15px;
+		width: 970px;
+		height: 60px;
+	}
+	.navi ul{
+		list-style: none;
+		height: 40px;
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+	.navi ul li{
+		display: inline;
+		float: left;
+		font-size: 32px;
+	}
+	.navi ul li a{
+		padding: 10px, 5px, 5px, 35px; /* 하나있을땐 상하좌우 두개있을땐 상하, 좌우 네개있을땐 시계방향으로 상,우,하,좌 */
+		display: block;
+		width: 150px;
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	.navi a:HOVER, a:FOCUS {
+		text-shadow: 0px 5px 5px #ff0000;
+		color: #fc0
+	}
+	
+		
+</style>
+</head>
+<body>
+	<header>
+		<h1>한빛교육센터 소식</h1>
+	</header>
+	<nav class="navi">
+		<ul>
+			<li><a href="#">Java</a>
+			<li><a href="#">JSP</a>
+			<li><a href="#">Spring</a>
+			<li><a href="#">Android</a>
+		</ul>
+	</nav>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

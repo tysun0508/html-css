@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>페이지 이동: 리다이렉트, 포워딩</title>
+		<script type="text/javascript">
+			function test(){
+				location.href="http://www.naver.com";
+			}
+			function test2(a){
+				open(a, "width=400, height=500");
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input type="button" value="이동1" onclick="test()"/>
+		<input type="button" value="이동2" onclick="test2('ex01.html')"/>
+		<input type="button" value="이동3" onclick="javascript:alert('직접호출')"/>
+	</body>
+</html>

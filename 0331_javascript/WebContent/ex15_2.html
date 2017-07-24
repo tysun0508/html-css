@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function</title>
+		<script type="text/javascript">
+			function send_go(){
+				setTimeout(function(){
+					alert("경고메세지");
+				}, 3000);
+			}
+		</script>
+		</head>
+	<body>
+		<h2>버튼을 클릭하면 3초 후에 경고창 나타남</h2>
+		<button onclick="send_go()">클릭</button>
+	</body>
+</html>

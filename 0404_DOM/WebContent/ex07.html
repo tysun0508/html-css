@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 노드 생성</title>
+<script type="text/javascript">
+	onload = function() {
+		var str = document.createTextNode("휴가");
+		var my = document.getElementById("my");
+		// 일반 글자 삽입
+		my.appendChild(str);
+		// 태그
+		my.innerHTML="<h2> 휴가에는 방콕이 최고 </h2>";
+		
+		var div = document.createElement("div");
+		var str2 = document.createTextNode("장미 휴가");
+		div.appendChild(str2);
+		document.body.appendChild(div).style.background="orange";
+		document.body.appendChild(div).style.color="red";
+		document.body.appendChild(div).style.width="120px";
+		document.body.appendChild(div).style.height="200px";
+	}
+</script>
+</head>
+<body>
+	<span>안녕하세요</span><br />
+	<span id="my"></span>
+</body>
+</html>

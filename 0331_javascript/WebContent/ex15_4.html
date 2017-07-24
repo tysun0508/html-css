@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setInterval(콜백함수,지연시간)</title>
+  <!-- setTimeout과 달리 반드시 개발자가 종료 시켜야 된다. -->
+  <!-- 종료는 clearInterval() 사용 -->
+  	<script type="text/javascript">
+  		var id;
+  		onload = function() {
+			id = setInterval(flashText,500);
+			function flashText() {
+				var div = document.getElementById("target");
+				div.style.color=(div.style.color=="red")?"blue":"red";
+			}  
+		}
+  	  function stop_go(){
+  		  clearInterval(id);
+  	  }
+  	</script>
+</head>
+<body>
+	<div id="target">
+		<p>대한민국 파이팅</p>
+	</div>
+	<button onclick="stop_go()">중지</button>
+</body>
+</html>

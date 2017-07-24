@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>대화상자</title>
+<script type="text/javascript">
+	// 대화상자
+	// 경고(alert) : window.alert("문자열"), alert("문자열");
+	// 확인(confirm) : confirm("문자열") : 확인(true), 취소(false);
+	// 입력상자(prompt): prompt("문자열","초기값"), prompt("문자열");
+	document.write("<h2>");
+	// alert은 리턴이 없다.
+	//   var res = alert("안녕하세요\nHi~~~");
+	//   document.write(res); // undefined =>정의 되지않음
+	//   var res = confirm("안녕하세요\nHi~~~")?80:"몰라";
+	//   document.write(res);
+	//	var res = prompt("정수입력",10); 
+	//	document.write(res);
+	   var res =  prompt("정수입력",10);
+	   var result=0;
+	   res%2==0?result="짝수":result="홀수";
+	   document.write("결과 : " + result );
+			   
+	
+		
+	document.write("</h2>");
+</script>
+</head>
+<body>
+</body>
+</html>

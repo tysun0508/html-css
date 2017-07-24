@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 이벤트</title>
+<script type="text/javascript">
+	function calc() {
+		alert("calc")
+		// input을 name으로 호출
+		var su1 = document.f.x1.value;
+		var su2 = document.f.y1.value;
+		// value는 무조건 문자 취급
+		var sum = parseInt(su1)+parseInt(su2);
+		document.getElementById("res").innerHTML = sum;
+	}
+	function calc2(k) {
+		alert("calc2")
+		var su1 = k.x1.value;
+		var su2 = k.y1.value;
+		// value는 무조건 문자 취급
+		var sum = parseInt(su1)+parseInt(su2);
+		document.getElementById("res").innerHTML = sum;
+	}
+	function calc3() {
+		alert("calc3")
+		var su1 = document.getElementById("x2").value;
+		var su2 = document.getElementById("y2").value;
+		// value는 무조건 문자 취급
+		var sum = parseInt(su1)+parseInt(su2);
+		document.getElementById("res").innerHTML = sum;
+	}
+	function calc4() {
+		alert("calc4")
+		var su1 = document.getElementById("x3").value;
+		var su2 = document.f2.y3.value;
+		// value는 무조건 문자 취급
+		var sum = parseInt(su1)+parseInt(su2);
+		document.getElementById("res").innerHTML = sum;
+	}
+</script>
+</head>
+<body>
+	<h2>덧셈 계산기</h2>
+	<form name="f">
+		첫번째수 : <input type="number" id="x" name="x1" /><br/>
+		두번째수 : <input type="number" id="y" name="y1" /><br/>
+		<input type="button" value="계산하기" onclick="calc()" />
+		<!-- form 태근 안에서는 button태그 사용하지 말자 -->
+		<!-- <button onclick="calc()">계산</button> -->
+	
+	</form>
+		<button onclick="calc()">계산</button>
+	<hr/>
+	<form>
+		첫번째수 : <input type="number" id="x1" name="x1" /><br/>
+		두번째수 : <input type="number" id="y1" name="y1" /><br/>
+		<input type="button" value="계산하기" onclick="calc2(this.form)" />
+	
+	</form>
+		<button onclick="calc2()">계산</button>
+	<hr/>
+	<form>
+		첫번째수 : <input type="number" id="x2" name="x2" /><br/>
+		두번째수 : <input type="number" id="y2" name="y2" /><br/>
+		<input type="button" value="계산하기" onclick="calc3()" />
+	</form>
+	<hr/>
+	<form name="f2">
+		첫번째수 : <input type="number" id="x3" name="x3" /><br/>
+		두번째수 : <input type="number" id="y3" name="y3" /><br/>
+	</form>
+		<button onclick="calc4()">계산</button>
+		<p>결과보기 : <span id ="res"></span></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그 생성해서 body에 추가 하기</title>
+<style type="text/css">
+	table,th,td{border: 1px solid black; text-align: center;}
+	#myTable{width: 700px}
+</style>
+<script type="text/javascript">
+	function add() {
+		// 태그 생성
+		var tr = document.createElement("tr");
+		var td1 = document.createElement("td");	 
+		var td2 = document.createElement("td");	
+		var td3 = document.createElement("td");
+		
+		// innerHTML => 특정 객체 안에 HTML코드를 추가 할때 사용
+		td1.innerHTML = "1";
+		td2.innerHTML = "둘리";
+		td3.innerHTML = "010-7979-9797";
+		
+		// tr안에 td 추가
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		tr.appendChild(td3);
+		
+		// tbody tr 추가
+		var tbody = document.getElementById("myTable").children[2].appendChild(tr);
+	}
+</script>
+</head>
+<body>
+	<table id="myTable">
+		<thead>
+			<tr><th> 번호 </th><th> 이름 </th><th> 전화 </th></tr>
+		</thead>
+		<tfoot>
+			<tr><td colspan="3">
+			       <input type="button" value="추가" onclick="add()">
+			 </td></tr>
+		</tfoot>
+		
+		<tbody>
+		
+		</tbody>
+	</table>
+</body>
+</html>

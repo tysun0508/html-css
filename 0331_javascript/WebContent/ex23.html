@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 이벤트</title>
+<script type="text/javascript">
+	var com = parseInt(Math.random()*100)+1;
+	var count = 0;
+	alert(com);
+	function test() {
+		count++;
+		var res = ""; // 힌트
+		var user = parseInt(document.getElementById("su").value);
+		if(user == com){
+			res = " 성공 ";
+		}else if(user > com){
+			res = " 보다 낮은 숫자로 입력하세요";
+		}else if(user < com){
+			res = " 보다 높은 숫자로 입력하세요";
+		}
+		
+		document.getElementById("count").innerHTML = count;
+		document.getElementById("res").innerHTML = res;
+	}
+
+</script>
+</head>
+<body>
+	<h2>숫자 맞추기 게임</h2>
+	<p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임이다.<br/>
+		숫자는 1-100 사이에 존재한다.
+	
+	</p>
+	<form>
+		숫자: <input type="number" id="su" size="5" />
+			 <input type="button" value="확인" onclick="test()" />
+	
+	</form>
+	
+	<br/>
+	<p>추측횟수 : <span id="count"></span><br/>
+		힌트 : <span id="res"></span></p>
+	
+</body>
+</html>

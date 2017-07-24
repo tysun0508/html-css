@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		border: 1px solid black;
+		width:200px;
+		height: 200px;
+		display: none;
+	}
+	#box1{background-color: red;}
+	#box2{background-color: green;}
+	#box3{background-color: blue;}
+	
+	/* 보이기 클래스 / 숨기기 클래스 만들자  */
+	.show{display: block;}
+	.hidden{display: none;}
+</style>
+<script type="text/javascript">
+	function one() {
+		var box1 = document.getElementById("box1");
+		var box2 = document.getElementById("box2");
+		var box3 = document.getElementById("box3");
+		
+		// 자바스크립트에서 클래스 호출하는 방법
+		box1.className="show";
+		box2.className="hidden";
+		box3.className="hidden";
+	}
+	function two() {
+		var box1 = document.getElementById("box1");
+		var box2 = document.getElementById("box2");
+		var box3 = document.getElementById("box3");
+		// 자바스크립트에서 클래스 호출하는 방법
+		box1.className="hidden";
+		box2.className="show";
+		box3.className="hidden";
+		
+	}
+	function three() {
+		var box1 = document.getElementById("box1");
+		var box2 = document.getElementById("box2");
+		var box3 = document.getElementById("box3");
+		// 자바스크립트에서 클래스 호출하는 방법
+		box1.className="hidden";
+		box2.className="hidden";
+		box3.className="show";
+		
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="one" onclick="one()" />
+	<input type="button" value="two" onclick="two()" />
+	<input type="button" value="three" onclick="three()" />
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOM: 브라우저객체모델</title>
+<script type="text/javascript">
+	function send_go() {
+		// open(url,name,속성,히스토리리스트에 참여여부);
+		// name ;  _blank,타켓
+		// 속성 ; width, height,
+		// 참여여부 ; true,false
+		open("ex01.html","_blank","width=300,height=300","true")
+	}
+</script>
+</head>
+<body>
+<!-- BOM : 웹브라우저가 가지고 있는 객체 
+	1.window : 최상위객 생략 => alert, confirm,
+	2.navigator : 브라우저에 대한 정보
+    3.location: 현재 위치 정보(URL)
+    4.document: 현재문서(브라우저에 표시는 HTML문서)
+    5.history : 사용자가 방문한 URL정보
+    6.screen : 사용자 화면정보
+    7.frames ; 브라우저를 차지하고 있는 프레임
+-->
+	<form>
+		<input type="button" value="창열기" onclick="send_go()" />
+	</form>
+</body>
+</html>

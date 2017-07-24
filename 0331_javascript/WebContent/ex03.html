@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if문 , switch문</title>
+<script type="text/javascript">
+	// 평균점수를 받아서 학점 출력하기
+	var res = prompt("당신의 평균 ? ");
+	var result ;
+	/* if(res>=90){
+		result="A";
+	}else if(res>=80){
+		result="B";
+	}else if(res>=70){
+		result="C";
+	}else{
+		result="F";
+	} */
+	// 강제로 정수변환 =>  parseInt()
+	switch (parseInt(res/10)) {
+	case 10:
+	case 9:result="A";break;
+	case 8:result="B";break;
+	case 7:result="C";break;
+	default:result="F"
+	}
+	document.write("<h2>");
+		document.write("당신의 학점은 " +result+ "입니다.<br />");
+		
+		
+	document.write("</h2>");
+	
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+<style type="text/css">
+fieldset {
+	width: 300px
+}
+</style>
+</head>
+<body>
+	<!-- 사용자의 데이터를 입력받아서, 특정 작업을 할때 사용 -->
+	<!-- 
+	<form action="받은 데이터를 처리할 페이지의 경로",
+		  method="get | post" , 생략하면 get방식 				
+		  get 방식 = 정보를 헤더에 담아서 보내다. 
+		             눈에 보임, 보안에 취약, 빠르다, 적은 양처리
+		  post방식 = 정보를 바디에 담아서 보내다.
+		             눈에 안보임, 보안적인고,  많은양 처리
+		  name ="호출할 이름"
+		  enctype = file 처리 할때만 사용 >
+		  
+		  <input type="" />
+		  <select>,<textarea>,<button>, <datalist>
+	</form>
+    -->
+	<form action="ex18.html" method="post">
+		<fieldset>
+			<legend>form 요소</legend>
+
+			<!-- 사용자가 입력한 값이 value속성의 값이다.  -->
+			<p>
+				이름 : <input type="text" name="name" placeholder="이름입력" />
+			</p>
+			<p>
+				나이 : <input type="number" name="age" placeholder="나이입력" />
+			</p>
+			<p>
+				전화 : <input type="tel" name="tel" />
+			</p>
+			<p>
+				비번 : <input type="password" name="pw" />
+			</p>
+
+			<!-- 라디오버튼은 여러개중 하나만 선택 -->
+			<p>
+				성별 : <input type="radio" name="gender" value="남" />남자 <input
+					type="radio" name="gender" value="여" />여자
+			</p>
+
+			<!-- 체크박스 여러개중 여러개혹은 하나도 선택하지 않은것 -->
+			<!-- 여러개가 넘어온다. => 배열처리 -->
+			<p>
+				취미 : <input type="checkbox" name="hobby" value="축구" />축구 <input
+					type="checkbox" name="hobby" value="야구" />야구 <input type="checkbox"
+					name="hobby" value="농구" />농구 <input type="checkbox" name="hobby"
+					value="농구" />농구
+
+			</p>
+			<p>
+				파일 : <input type="file" />
+			</p>
+			<p>
+				컬러 : <input type="color" />
+			</p>
+			<p>
+				날짜 : <input type="date" />
+			</p>
+			<p>
+				시간 : <input type="time" />
+			</p>
+			<p>
+				날짜시간 : <input type="datetime" />
+			</p>
+			<p>
+				범위 : <input type="range" />
+			</p>
+
+			<!-- 하나만선택 -->
+			<p>
+				거주지 : <select name="sel">
+					<option>선택하세요</option>
+					<option value="서울">서울</option>
+					<option value="대구">대구</option>
+					<option value="대전">대전</option>
+					<option value="부산">부산</option>
+					<option value="광주">광주</option>
+				</select>
+			</p>
+			<!-- 여러개 선택 가능 -->
+			<p>
+				거주지2 : <select name="sel" multiple>
+					<option>선택하세요</option>
+					<option value="서울">서울</option>
+					<option value="대구">대구</option>
+					<option value="대전">대전</option>
+					<option value="부산">부산</option>
+					<option value="광주">광주</option>
+				</select>
+			</p>
+			<p>
+				<textarea rows="10" cols="30">여기에 글자 입력</textarea>
+			</p>
+			<p>
+				<input list="browsers">
+				<datalist id="browsers">
+					<option value="Internet Explorer">
+					<option value="Firefox">
+					<option value="Chrome">
+					<option value="Opera">
+					<option value="Safari">
+				</datalist>
+			</p>
+			<!-- action의 위치로 정보를 보낼 때 사용 -->
+			<p>
+				<input type="submit" value="보낼까?" />
+			</p>
+			<!-- 입력한 정보 초기화  -->
+			<p>
+				<input type="reset" value="취소" />
+			</p>
+
+			<!-- 자바스크립틀 거쳐서 실행할때 사용 -->
+			<p>
+				<button onclick="자바스크립트함수호출">보낼까2?</button>
+			</p>
+			<p>
+				<input type="button" value="보낼까3?" onclick="자바스크립트함수호출">
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>

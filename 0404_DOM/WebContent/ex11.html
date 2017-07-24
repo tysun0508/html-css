@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>형제노드(Sibling);다음(next),이전(previous)</title>
+<script type="text/javascript">
+	onload = function() {
+		var my2 = document.getElementById("my2");
+		while(my2){
+			if(my2.nodeName=="DIV"){
+				my2.innerHTML = "L"
+			}else if(my2.nodeName=="SPAN"){
+				my2.innerHTML = "S"
+			}
+			
+			my2 = my2.nextSibling;
+		}
+		
+		var my = document.getElementById("my");
+		while(my){
+			if(my.nodeName=="DIV"){
+				my.innerHTML = "L2"
+			}else if(my.nodeName=="SPAN"){
+				my.innerHTML = "S2"
+			}
+			
+			my = my.previousSibling;
+		}
+	}
+</script>
+</head>
+<body>
+	<span>----------</span>
+	<div>X</div>
+	<div>X</div>
+	<div id="my">A</div>
+	<div id="my2">B</div>
+	<div>X</div>
+	<span>Y</span>
+	<span>Y</span>
+	<div>X</div>
+	<span>----------</span>
+</body>
+</html>

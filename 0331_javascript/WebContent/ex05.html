@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+<script type="text/javascript">
+	// 배열 : 크기를 지정하지 않아도 된다. 모든 자료를 담을 수 있다.
+	 var arr = new Array();
+	 arr[0] = 10 ;
+	  arr[1] = "한빛";
+	  arr[2] = 3.14 ;
+	  arr[3] = true ;
+	  arr[4] = null ;
+	 for (var i = 0; i < arr.length; i++) {
+		 document.write(arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+	 }
+	 document.write("<hr />");
+	 var arr2 = ["포도", 15 ,false, 'a',3.14];
+	 for ( var k in arr2) {
+		 document.write(arr2[k]+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+	}
+	 document.write("<hr />");
+	
+	 // 맵, json, 객체 형식
+	 var arr3 = {
+			make : "BMW",
+			model : "X5",
+			year : 2017,
+			money : "2억"
+	 };
+	 
+	 document.write(arr3.make);
+	 document.write(arr3["model"]);
+	 document.write("<hr />");
+	 for ( var k in arr3) {
+		 document.write(arr3[k]+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+	}
+	 document.write("<hr />");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+

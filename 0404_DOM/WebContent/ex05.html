@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innerHTML</title>
+	<script type="text/javascript">
+		onload = function() {
+			document.getElementById("btn").onclick = function() {
+				document.getElementById("div").innerHTML ="<h2>내용 변경</h2>"
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="div">이것이 div 요소 입니다.</div>
+	<div id="btn">이것이 div 요소 입니다.</div>
+</body>
+</html>

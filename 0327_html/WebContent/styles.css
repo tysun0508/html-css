@@ -1,0 +1,9 @@
+/* 요소 선택자 : 해당 태그를 선택 */
+body{background-color: skyblue;}
+h1{color: blue; font-size: 200%}
+p{color: red; font-size: 34px}
+/* 클래스 선택자 : 중복허용 (점(.)) */
+	.p1{background-color: orange;}
+	
+/* 아이디 선택자 : 중복안됨 (#) */
+	#myp1{background-color: maroon;}

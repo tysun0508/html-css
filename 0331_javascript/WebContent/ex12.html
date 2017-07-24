@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			var su = 100;
+			function add(a,b){
+				document.write("결과 : " + (a+b)+"<br/>");
+			}
+			function sub(a,b){
+				return a-b;
+			}
+			function test(start, end, k){
+				var count = 0;
+				for(var i = start; i < end; i++){
+					if(i%k==0) count++;
+				}
+				document.write("총" + count + "개 입니다.<br/>")
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h2>
+			<script type="text/javascript">
+				document.write("su = " + su+"<br/>");
+				add(100,200);
+				add("대한민국", "파이팅");
+				var res = sub(200,50);
+				document.write("res = "+ res+"<br/>");
+				test(1, 100, 5);
+			</script>
+		</h2>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display</title>
+<style type="text/css">
+/* 	li{display: inline;} */
+    li{display: block;}
+    h1{display: none;}  
+    h2.hidden{visibility: hidden;} /* 보이지 않지만 영역확보, */
+</style>
+</head>
+<body>
+<!-- 블록레벨 : <div>,<h1> - <h6>,<p>,<form>,<header>,<footer>,<section>
+     인라인베렐 : <span>,<a>,<img> -->
+     
+<p>Display a list of links as a horizontal menu:</p>
+<ul>
+  <li><a href="#">HTML</a></li>
+  <li><a href="#">CSS</a></li>
+  <li><a href="#">JavaScript</a></li>
+</ul>
+<hr />
+<h1>This is a visible heading</h1>
+<h2 class="hidden">This is a hidden heading</h2>
+<p>Notice that the h1 element with display: none; does not take up any space.</p>
+
+</body>
+</html>

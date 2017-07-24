@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>first,last,parent,nextSibling,previousSibling</title>
+	<script type="text/javascript">
+		onload = function() {
+			document.getElementById("btn").onclick = function(){
+				var my = document.getElementById("my");
+				var msg = "";
+				msg += "노드명 : " + my.nodeName ; // 대문자(태그)
+				msg += "\n노드타입 : " + my.nodeType; // 1(요소),2(속성),3(텍스트)
+				msg += "\n노드값 : " + my.nodeValue; // null(요소),값(속성),텍스트(텍스트)
+				msg += "\n자식노드의수 : " + my.childNodes.length;
+				
+				// document.getElementById("res1").innerHTML = msg ;
+				
+				var childs =my.childNodes;
+				for (var i = 0; i < childs.length; i++) {
+						alert(childs[i].nodeName); // #text, LI반복
+				}
+			}
+		};
+	</script>
+</head>
+<body>
+<!--
+	firstChild : 첫번째 자식 노드
+	lastChild : 마지막 자식 노드
+	parentNode : 부모노드
+	nextSibling :   다음 형제 노드
+	previousSibling : 이전 형제 노드
+  -->
+  <ul id="my">
+  		<li>java</li>
+  		<li>javascirpt</li>
+  		<li>jsp</li>
+  		<li>jQuery</li>
+  		<li>Ajax</li>
+  </ul>
+  <button id="btn">결과</button>
+  <hr />
+  	<h2>결과보기 : <span id="res1"></span> </h2>
+</body>
+</html>
+
+
+
+
+

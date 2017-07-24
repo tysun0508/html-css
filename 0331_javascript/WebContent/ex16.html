@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>객체 생성</title>
+		<script type="text/javascript">
+		var person = new Object(); // 객체 생성
+		person["name"] = "홍길동"; // 자바의 멤버필드(변수,상수)
+		person["age"] = 14 ; 
+		person["salary"] = 2400 ; 
+		
+		document.write(person["name"] + "<br />");
+		document.write(person.age + "<br />");
+		document.write(person.salary + "<br />");
+		</script>
+
+	</head>
+	<body>
+		<p>자바스크립트 객체 생성 연습</p>
+		<p id="demo"></p>
+		<h2><p id="demo2"></p></h2>
+		
+		<script type="text/javascript">
+			var car = {
+				type : "Fist";
+				model : "5GW";
+			 	color : "white";
+			};
+			document.getElementById("demo").innerHTML = car.model;
+		</script>
+		<script type="text/javascript">
+			var person2 ={
+				name : "둘리",
+				age : 1024,
+				salary : 2400,
+				all : function(){ // this => 현재 사용중인 객체
+					return this.name + ","+ this.age + "," + this.salary;
+				}
+			};
+			document.getElementById("demo2").innerHTML = person2.all();
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

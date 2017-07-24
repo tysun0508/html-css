@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>removeChild, parentNode</title>
+	<script type="text/javascript">
+		onload = function() {
+			// 부모노드에서 자식 노드 삭제
+			document.getElementById("div").removeChild(p2);
+			
+			// 자식 노드에서 부모노드에게 접근
+			var str = document.getElementById("str");
+			var p3 = str.parentNode;
+			// 삭제된 정보를 del 가지고 있다.
+			var del = p3.removeChild(str);
+			document.getElementById("p5").appendChild(del);
+		}
+	</script>
+</head>
+<body>
+	<div id="div">
+		<p id ="p1"><span>안녕</span>하세요</p>
+		<p id ="p2"><span>반갑</span>습니다.</p>
+		<p id ="p3"><span id="str">반갑</span>습니다.</p>
+		<p id ="p4"><span>안녕</span>하세요</p>
+		<hr />
+		<p id="p5"></p>
+	</div>
+</body>
+</html>

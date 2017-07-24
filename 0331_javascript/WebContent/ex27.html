@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그 생성해서 body에 추가 하기</title>
+<style type="text/css">
+	table,th,td{border: 1px solid black; text-align: center;}
+	#myTable{width: 700px}
+	fieldset {width: 300px};
+</style>
+<script type="text/javascript">
+	function addRow() {
+		// 태그 생성
+		var tr = document.createElement("tr");
+		var td1 = document.createElement("td");	 
+		var td2 = document.createElement("td");	
+		var td3 = document.createElement("td");
+		var td3 = document.createElement("td");
+		var td4 = document.createElement("td");
+		
+		// innerHTML => 특정 객체 안에 HTML코드를 추가 할때 사용
+		td1.innerHTML = document.f.no.value;
+		td2.innerHTML = document.f.name.value;
+		td3.innerHTML = document.f.phone.value;
+		td4.innerHTML = "삭제";
+		
+		// tr안에 td 추가
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		tr.appendChild(td3);
+		tr.appendChild(td4);
+		
+		// tbody tr 추가
+		var tbody = document.getElementById("myTable").children[1].appendChild(tr);
+	}
+</script>
+</head>
+<body>
+    <h1> 테이블에서 행을 추가 예제</h1>
+	<form name="f">
+		<fieldset>
+			<legend>회원가입</legend>
+			<p>번호 :  <input type="text" size="10" name="no" /></p>
+			<p>이름 :  <input type="text" size="10" name="name" /></p>
+			<p>전화번호 :  <input type="text" size="20" name="phone" /></p>
+			<p><input type="button" value="추가" onclick="addRow()"/></p>
+		</fieldset>
+	</form>
+	<br /><br /><br />
+	<hr />
+	<br /><br /><br />
+	<table id="myTable">
+		<thead>
+			<tr><th> 번호 </th><th> 이름 </th><th> 전화 </th><th> 삭제 </th></tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</body>
+</html>

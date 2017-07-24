@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SVG: XML 기반의 도형그리기</title>
+<style type="text/css">
+	svg{width: 800px; height: 600px; border: 1px solid black;}
+</style>
+</head>
+<body>
+	<svg>
+	<!-- line (선) :  x1 y1 x2 y2 style="선색"; stroke-width:선두께 -->
+	  <line x1=10 y1=10 x2=110 y2=10 style="stroke:red;stroke-width:5"/>
+	  <line x1=110 y1=10 x2=110 y2=110 style="stroke:red;stroke-width:5"/>
+	  <line x1=10 y1=10 x2=10 y2=110 style="stroke:red;stroke-width:5"/>
+	  <line x1=10 y1=110 x2=110 y2=110 style="stroke:red;stroke-width:5"/>
+	  
+	<!-- rect x y width height fill stroke -->
+	  <rect x=120 y=10 width=100 height=100 fill=#ff0 stroke="red"/>		  
+	  <rect x=230 y=10 width=100 height=100 stroke="red"/>		  
+	  <rect x=340 y=10 width=100 height=100 fill=#ff0 />
+	  
+	<!-- circle cx cy r fill stroke -->
+	  <circle cx=60  cy=180  r=50 width=50 fill=#ff0 stroke="red"/>
+	  
+	<!--ellipse cx cy(중심좌표) rx ry(반지름길이) fill stroke  -->
+	  <ellipse cx=230  cy=180  rx=50 ry=100 width=50 fill=#ff0 stroke="red"/>		  
+	  <ellipse cx=230  cy=180  rx=100 ry=50 width=50 fill=#ff0 stroke="red"/>	
+	  
+	 <!-- 다각형 : 무조건 시작점과 끝은 같아야 한다. -->
+	 <polyline  points ="500,300 600,300 300,500 700,400 400,400 500,300"     fill="#0f0" stroke="#f0f"/>
+	 
+	 
+	 <!-- 문자 -->
+	 <text x=10 y=300 font-size=70  fill=red stroke=green font-family="궁서">HELLO</text>
+	</svg>
+</body>
+</html>
